@@ -36,6 +36,12 @@
       "script": "apache.sh" 
     },
     {
+      "type": "shell",
+      "inline": [
+        "sudo pip install ansible==2.7.9"
+      ]
+    },
+    {
       "type": "ansible-local",
       "playbook_file": "ansible/playbook.yaml",
       "role_paths": [
