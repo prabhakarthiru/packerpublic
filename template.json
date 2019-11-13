@@ -12,7 +12,7 @@
       "source_ami_filter": {
         "filters": {
           "virtualization-type": "hvm",
-          "name": "amzn2-ami-hvm-2.0.*.1-x86_64-ebs",
+          "name": "*RHEL-7.4_HVM_GA*",
           "root-device-type": "ebs"
         },
         "owners": [
