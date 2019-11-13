@@ -38,15 +38,17 @@
     {
       "type": "shell",
       "inline": [
-        "sudo pip install ansible==2.7.9"
+        "sudo -E yum install -y wget",
+        "sudo easy_install pip",
+        "sudo pip install --upgrade pip",
+        "sudo pip install pyopenssl ndg-httpsclient pyasn1",
+        "sudo pip install ansible"
       ]
     },
     {
       "type": "ansible-local",
       "playbook_file": "ansible/playbook.yaml",
-      "role_paths": [
-        "ansible/roles/common"
-      ],
+      "role_paths": [ "ansible/roles/common" ],
       "playbook_dir": "ansible",
       "galaxy_file": "ansible/requirements.yaml"
     }
