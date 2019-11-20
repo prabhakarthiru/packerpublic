@@ -20,7 +20,7 @@ pipeline {
                    }
                    stage('PackerAMI'){
                                 steps {
-                                      sh 'packer build template.json'
+                                       echo ${cre}
                                 }
                    }
                    stage ('three') {
