@@ -1,10 +1,15 @@
 pipeline {
 	agent any
+
+  environment {
+        cre = 'sh assumerole.env'
+  }
 	       stages {
                    stage('one'){
                                steps {
 
                                       echo 'Hi, My first pipeline'
+                                      echo ${cre}
                                }
                    }
 
