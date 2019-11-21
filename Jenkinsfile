@@ -1,8 +1,15 @@
 pipeline {
 	agent any
 
+options {
+    ansiColor('xterm')
+    timestamps()
+    timeout(time: 1, unit: 'HOURS'
+    disableConcurrentBuilds()
+  }
+
   environment {
-        BUILD_VPC_ID = 'vpc-9c99a2f9'
+    BUILD_VPC_ID = 'vpc-9c99a2f9'
     BUILD_SUBNET_ID = 'subnet-e969b68d'
     BUILD_SG_ID = 'sg-00493b2e885b258ae'
     BUILD_PROFILE = 'ec2switchrole'
