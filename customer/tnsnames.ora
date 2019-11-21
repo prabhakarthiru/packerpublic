@@ -1,0 +1,8 @@
+DB1MXDB =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = mx-database)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = DB1MXDB)
+    )
+  )

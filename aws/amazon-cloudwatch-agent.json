@@ -1,0 +1,201 @@
+{
+        "agent": {
+                "debug" : true,
+                "metrics_collection_interval": 10,
+                "logfile": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log"
+        },
+        "metrics": {
+                "metrics_collected": {
+                        "mem": {
+                                "measurement": [
+                                        "mem_used_percent"
+                                ]
+                        },
+
+                        "swap": {
+                                "measurement": [
+                                        "swap_used_percent"
+                                ]
+                        },
+                        "disk": {
+                                "measurement": [
+                                        "used_percent"
+                                ]
+                        },
+                        "cpu": {
+                                "resources": [
+                                        "*"
+                                ],
+                                "measurement": [
+                                        {"name": "cpu_usage_idle", "rename": "CPU_USAGE_IDLE", "unit": "Percent"},
+                                        {"name": "cpu_usage_nice", "unit": "Percent"},"cpu_usage_guest"
+                                ],
+                                "totalcpu": true,
+                                "metrics_collection_interval": 30
+                        }
+                },
+                "append_dimensions": {
+                        "ImageId": "${aws:ImageId}",
+                        "InstanceId": "${aws:InstanceId}",
+                        "InstanceType": "${aws:InstanceType}",
+                        "AutoScalingGroupName": "${aws:AutoScalingGroupName}"
+                }
+        },
+        "logs": {
+                "logs_collected": {
+                        "files": {
+                                "collect_list": [
+                                        {  
+                                                "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
+                                                "timezone": "UTC",
+                                                "timestamp_format":"%H:%M:%S %y %b %-d"
+                                        },
+                                        {
+                                                "file_path": "/var/log/messages",
+                                                "timezone": "Local"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/*.mxres.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxres.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/murexnet.*.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/murexnet.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/xmlserver.*.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/xmlserver.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/fileserver.*.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/fileserver.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/assembly-audit.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/assembly-audit.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/errors.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/errors.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/GC_MxML_Exchange_*.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/GC_MxML_Exchange_.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mx_output.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mx_output.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mx_stderr.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mx_stderr.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxversion.log",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxversion.log",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/liquidation/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/liquidation/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mmslogs/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mmslogs/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxdispatcher/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxdispatcher/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxinternal_loginimpl/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxinternal_loginimpl/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxlrb/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxlrb/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mx_middleware_services/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mx_middleware_services/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxmigration/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxmigration/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxmlc/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxmlc/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/mxodr/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/mxodr/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/proxy/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/proxy/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/viewer/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/viewer/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/accruals/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/accruals/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        },
+                                        {
+                                                "file_path": "/proj/murex/mx/logs/install/**",
+                                                "log_stream_name": "environmentX/{local_hostname}/{instance_id}/install/",
+                                                "log_group_name": "mx_logs",
+                                                "timestamp_format":"%%Y-%m-%d %H:%M:%S"
+                                        }
+                                ]
+                        }
+                },
+                "log_stream_name": "environmentX/{local_hostname}.environmentX.{instance_id}"
+        }
+}

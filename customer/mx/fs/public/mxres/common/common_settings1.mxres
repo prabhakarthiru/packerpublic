@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE MxAnchors>
+<MxAnchors>
+
+  <!--
+  - flags used in ALL mx processes
+  -->
+ 
+  <MxAnchor Code="COMMON_SETTINGS1">
+    <DefaultCommand>/FUT_CL_HIS:10000</DefaultCommand>
+    <DefaultCommand>/IRD_BOND_TYPE_ALL</DefaultCommand>
+    <DefaultCommand>/LOAD_NULL_POSITION</DefaultCommand>
+    <DefaultCommand>/logdir:logs/traces</DefaultCommand>
+    <DefaultCommand>/MXJ_AUTO_ADAPT_DATES</DefaultCommand>
+    <DefaultCommand>/NEW_SCHEDULES</DefaultCommand>
+    <DefaultCommand>/STBOPTIONS:STB_PREF_LISTS;STB_REGISTRY_BROWSE</DefaultCommand>
+  </MxAnchor> 
+
+</MxAnchors>

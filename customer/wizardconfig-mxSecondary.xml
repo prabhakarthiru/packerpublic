@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wizardConfig>
+    <pages>
+        <page>
+            <id>mxpack.welcome</id>
+            <description>Welcome page</description>
+            <properties>
+                <property name="message" value="Welcome to the MX.3 Install Wizard for Secondary Application Server." type="java.lang.String" useWizardDefault="false"/>
+                <property name="company" value="MUREX" type="java.lang.String" useWizardDefault="false"/>
+                <property name="website" value="www.murex.com" type="java.lang.String" useWizardDefault="false"/>
+                <property name="version" value="v3.1.34" type="java.lang.String" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxpack.license</id>
+            <description>License page</description>
+            <properties>
+                <property name="decision" value="true" type="java.lang.Boolean" useWizardDefault="false"/>
+                <property name="path" value="files/approvalSecondaryApplicationServer.txt" type="java.lang.String" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxpack.destination</id>
+            <description>Destination page</description>
+            <properties>
+                <property name="destination" value="/proj/murex/mx" type="java.lang.String" description="Installation Target Folder" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>DbSourceConfig</id>
+            <description>Database server type configuration</description>
+            <properties>
+                <property name="dbType" value="Oracle" type="murex.packaging.DbType" description="Database server type" useWizardDefault="false"/>
+            </properties>
+        </page>
+       <page>
+            <id>MacsIRD</id>
+            <description>Macs for interest rates derivatives</description>
+            <properties>
+                <property name="macsIrd" value="false" type="java.lang.Boolean" description="Use Macs for interest rates derivatives" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>MacsPython</id>
+            <description>Python for Macs</description>
+            <properties>
+                <property name="macsPython" value="false" type="java.lang.Boolean" description="Use Python for Macs " useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>MacsGPUForPFE</id>
+            <description>Macs GPU for PFE</description>
+            <properties>
+                <property name="macsGPUForPFE" value="false" type="java.lang.Boolean" description="Use Macs GPU for PFE [requires OpenCL libraries to be installed]" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxg2000settings.page</id>
+            <description>Secondary Application Server Settings</description>
+            <properties>
+                <property name="javaHome" value="/proj/oracle/jdk1.7.0_51" type="java.lang.String" description="Path to java directory" useWizardDefault="false"/>
+                <property name="sybaseHome" value="/opt/sybase/oc15.7-EBF21002" type="java.lang.String" description="Path to SYBASE directory" useWizardDefault="false"/>
+                <property name="oracleHome" value="/proj/oracle/install/OracleClient/11.2" type="java.lang.String" description="Path to ORACLE directory" useWizardDefault="false"/>
+                <property name="site" value="site1" type="java.lang.String" description="Site name" useWizardDefault="false"/>
+                <property name="murexNetPort" value="10003" type="java.lang.Integer" description="Murexnet port number" useWizardDefault="false"/>
+                <property name="ds_clientlib_path" value="/nettools/datasynapse/gridserver.6.1/lib64" type="java.lang.String" description="TIBCO gridserver default Libraries path" useWizardDefault="false"/>
+                <property name="sym_clientlib_path" value="/nettools/symphony/7.1/symphonyClient/Client71/lib64" type="java.lang.String" description="IBM Platform Symphony default Libraries path" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>CoreNameFormat</id>
+            <description>Core Name Format</description>
+            <properties>
+                <property name="coreNameFormat" value="false" type="java.lang.Boolean" description="Core Name Format Enabled" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>fs.page</id>
+            <description>File server Settings</description>
+            <properties>
+                <property name="fsHost" value="MUREXHOSTNAME" type="java.lang.String" description="Host name" useWizardDefault="false"/>
+                <property name="fsPort" value="10000" type="java.lang.String" description="Port number" useWizardDefault="false"/>
+            </properties>
+        </page>
+    </pages>
+</wizardConfig>

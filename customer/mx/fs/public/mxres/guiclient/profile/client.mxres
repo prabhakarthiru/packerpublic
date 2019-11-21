@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE ClientConfig>
+<ClientConfig>
+ <MainBar>
+    <ForkNewSignIn>Y</ForkNewSignIn>
+    <Title Name="ENVIRONMENT_NAME"></Title>
+    <EnvironmentStyle>@mxe.dyn.type.color@</EnvironmentStyle>
+    <EnvironmentName>ENVIRONMENT_NAME</EnvironmentName>
+ </MainBar>
+
+  <Screen>
+    <Dimension Width="1024" Height="810" />
+    <Title AddMxInfo="Y">
+      <Text>ENVIRONMENT_NAME</Text>
+      <USER_INFO />
+      <MX_INFO />
+    </Title>
+  </Screen>
+  <FastDealInputMode PrecisionWarning="Y"  PrecisionWarningDecimals="7" Synchronous="N" TimerActive="N"  TimerPeriod="5000">
+    <HeaderFormat>
+      <Foreground R="0" G="0" B="0" />
+      <Background R="194" G="214" B="238" />
+    </HeaderFormat>
+  </FastDealInputMode>
+  <LongBidAsk Activated="N" />
+  <SmallFigures Activated="Y" />
+  <ExtendPrecision Width="20" Decimals="10" Activated="Y" />
+</ClientConfig>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE Launcher>
+
+<Launcher>
+  <PlatformName>MX</PlatformName>
+  <InstallationCode>LAUNCHERMXMLEXCHANGESECONDARY</InstallationCode>
+  <AvailableServices>
+
+    <AvailableService>
+      <Code>MXDICTIONARY</Code>    
+    </AvailableService>
+    <AvailableService>
+      <Code>MXTEMPLATES</Code>    
+    </AvailableService>
+    <AvailableService>
+      <Code>MXDATAEXTRACTOR</Code>    
+    </AvailableService>
+<AvailableService>
+      <Code>MXMLEXCHANGE</Code>
+  <Import>
+        <RefNickName>MXMLEXCHANGE.REPORTING</RefNickName>
+      </Import>
+    </AvailableService>   
+    <!--
+    <AvailableService>
+      <Code>MXMLEXCHANGE</Code>
+      <Import>
+        <RefNickName>MXMLEXCHANGE.MATCHER.SPACES</RefNickName>
+        <NickName>CL.MXMLEXCHANGE.MATCHER.SPACES</NickName>
+        <Customize>
+          <DefaultCommands>
+          <DefaultCommand>/MXJ_CONFIG_FILE:public.mxres.mxmlexchange.spaces.mxmatcherspace.mxres</DefaultCommand>
+          </DefaultCommands>
+        </Customize>
+      </Import>
+    </AvailableService>
+    -->
+    <AvailableService>
+          <Code>MXMLEXCHANGE</Code>
+          <Import>
+            <RefNickName>MXMLEXCHANGE.ARCHIVE.SPACES</RefNickName>
+            <NickName>CL.MXMLEXCHANGE.ARCHIVE.SPACES</NickName>
+            <Customize>
+              <DefaultCommands>
+              <DefaultCommand>/MXJ_CONFIG_FILE:public.mxres.mxmlexchange.spaces.mxarchivespace.mxres</DefaultCommand>
+              </DefaultCommands>
+            </Customize>
+          </Import>
+    </AvailableService>
+    <AvailableService>
+          <Code>MXMLEXCHANGE</Code>
+          <Import>
+            <RefNickName>MXMLEXCHANGE.EXTERNAL.SOURCE.SPACES</RefNickName>
+            <NickName>CL.MXMLEXCHANGE.EXTERNAL.SOURCE.SPACES</NickName>
+            <Customize>
+              <DefaultCommands>
+              <DefaultCommand>/MXJ_CONFIG_FILE:public.mxres.mxmlexchange.spaces.externalsourcespace.mxres</DefaultCommand>
+              </DefaultCommands>
+            </Customize>
+          </Import>
+    </AvailableService>
+
+    <AvailableService>
+      <Code>RELATIONSHIP</Code>
+      <Import>
+        <RefNickName>RELATIONSHIP</RefNickName>
+        <NickName>RELATIONSHIP</NickName>
+      </Import>
+    </AvailableService> 
+ 
+  </AvailableServices>
+</Launcher>

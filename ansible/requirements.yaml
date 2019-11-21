@@ -1,3 +1,2 @@
 ---
-- src: anthcourtney.cis-amazon-linux
-- src: dharrisio.aws-cloudwatch-logs-agent
+- src: HarryHarcourt.Ansible-RHEL7-CIS-Benchmarks

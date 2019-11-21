@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE MxAnchors>
+<MxAnchors>
+
+  <!--
+  - flags used in ALL mx processes
+  -->
+ 
+  <MxAnchor Code="COMMON_SETTINGS2">
+    <DefaultCommand>/BO_SECPAY</DefaultCommand>
+    <DefaultCommand>/DYN_TABLE_CHUNK:1000</DefaultCommand>
+    <DefaultCommand>/EQD_NEW_FIXS_VOLS</DefaultCommand>
+    <DefaultCommand>/EQD_PRICE_LINKS_DEFAULT_NONE</DefaultCommand>
+    <DefaultCommand>/GENERATE_BOND_CPN_PAYMENTS</DefaultCommand>
+    <DefaultCommand>/OMARG</DefaultCommand>
+  </MxAnchor>
+
+</MxAnchors>

@@ -9,7 +9,7 @@ pipeline {
     AWS_REGION = 'ap-southeast-2'
   }
 	       stages {
-                   stage('one'){
+                   stage('Validate packer template'){
                                steps {
 
                                      echo "Validating Packer template"

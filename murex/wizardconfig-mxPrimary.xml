@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wizardConfig>
+    <pages>
+        <page>
+            <id>mxpack.welcome</id>
+            <description>Welcome page</description>
+            <properties>
+                <property name="message" value="Welcome to the MX.3 and MLC Install Wizard for Primary Application Server." type="java.lang.String" useWizardDefault="false"/>
+                <property name="company" value="MUREX" type="java.lang.String" useWizardDefault="false"/>
+                <property name="website" value="www.murex.com" type="java.lang.String" useWizardDefault="false"/>
+                <property name="version" value="v3.1.34" type="java.lang.String" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxpack.license</id>
+            <description>License page</description>
+            <properties>
+                <property name="decision" value="true" type="java.lang.Boolean" useWizardDefault="false"/>
+                <property name="path" value="files/approvalPrimaryApplicationServer.txt" type="java.lang.String" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxpack.destination</id>
+            <description>Destination page</description>
+            <properties>
+                <property name="destination" value="/proj/murex/mx" type="java.lang.String" description="Installation Target Folder" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>InstallationComponents</id>
+            <description>Components selection and installation</description>
+            <properties>
+                <property name="installMxComponents" value="true" type="java.lang.Boolean" description="Install MX components" useWizardDefault="false"/>
+                <property name="installMlcComponents" value="false" type="java.lang.Boolean" description="Install MLC components" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>DbSourceConfig</id>
+            <description>MXDBSOURCE Database source type configuration</description>
+            <properties>
+                <property name="dbType" value="Oracle" type="murex.packaging.DbType" description="Database server type" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="oraclePageInfo">
+            <id>dbConfig</id>
+            <description>MXDBSOURCE configuration - Oracle configuration</description>
+            <properties>
+                <property name="dbMxClientAccess" value="NATIVE_OCI" type="java.lang.String" description="dbMxClientAccess" useWizardDefault="false"/>
+            </properties>
+            <host>MUREXDB_HOST</host>
+            <port>MUREXDB_PORT</port>
+            <server>MUREXDB_SERVER</server>
+            <database>MUREXDB_DB</database>
+            <user>appadmin</user>
+            <password>MAW123Rocks!</password>
+        </page>
+        <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="oraclePageInfo">
+            <id>dbConfigRep</id>
+            <description>MXDBSOURCE.REPORTING configuration - Oracle configuration</description>
+            <properties>
+                <property name="dbMxClientAccess" value="NATIVE_OCI" type="java.lang.String" description="dbMxClientAccess" useWizardDefault="false"/>
+            </properties>
+            <host>MUREXDB_HOST</host>
+            <port>MUREXDB_PORT</port>
+            <server>MUREXDB_SERVER</server>
+            <database>MUREXDB_DB</database>
+            <user>appadmin</user>
+            <password>MAW123Rocks!</password>
+        </page>
+        <page>
+            <id>dbsourceNumberPage</id>
+            <description>Database sources configuration</description>
+            <properties>
+                <property name="dbsourceNumber" value="0" type="java.lang.Integer" description="Number of additional DB sources to configure" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>DbServerCredentialsConfig</id>
+            <description>Server credentials configuration</description>
+            <properties>
+                <property name="user" value="MUREX_PS" type="java.lang.String" description="User" useWizardDefault="false"/>
+                <property name="password" value="POC" type="java.lang.String" description="Password" useWizardDefault="false"/>
+                <property name="group" value="BO" type="java.lang.String" description="Group" useWizardDefault="false"/>
+            </properties>
+        </page>		
+        <page>
+            <id>MxmlServerCredentialsConfig</id>
+            <description>MXML server credentials configuration</description>
+            <properties>
+                <property name="user" value="MUREX_PS" type="java.lang.String" description="User" useWizardDefault="false"/>
+                <property name="password" value="POC" type="java.lang.String" description="Password" useWizardDefault="false"/>
+                <property name="group" value="CONFIG" type="java.lang.String" description="Group" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>LivebookMonitoringCredentialsConfig</id>
+            <description>Livebook monitoring credentials configuration</description>
+            <properties>
+                <property name="user" value="MUREX_PS" type="java.lang.String" description="User" useWizardDefault="false"/>
+                <property name="password" value="POC" type="java.lang.String" description="Password" useWizardDefault="false"/>
+                <property name="group" value="CONFIG" type="java.lang.String" description="Group" useWizardDefault="false"/>
+            </properties>
+        </page>
+       <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="clientPageInfo">
+            <id>MurexnetConfig</id>
+            <description>Murexnet configuration</description>
+            <properties/>
+            <host>MUREXHOSTNAME</host>
+            <port>10003</port>
+        </page>
+        <page>
+            <id>BloombergInstallation</id>
+            <description>Bloomberg installation</description>
+            <properties>
+                <property name="bloombergInstall" value="false" type="java.lang.Boolean" description="Install bloomberg" useWizardDefault="false"/>
+                <property name="bloombergLegacyConfig" value="false" type="java.lang.Boolean" description="Ticker lookup functionality required" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxg2000settings.page</id>
+            <description>MxG2000 configuration</description>
+            <properties>
+                <property name="javaHome" value="/proj/oracle/jdk1.7.0._51" type="java.lang.String" description="Path to Java directory" useWizardDefault="false"/>
+                <property name="sybaseHome" value="/opt/sybase/oc15.7-EBF21018" type="java.lang.String" description="Path to SYBASE directory" useWizardDefault="false"/>
+                <property name="oracleHome" value="/proj/oracle/install/OracleClient/11.2" type="java.lang.String" description="Path to ORACLE directory" useWizardDefault="false"/>
+                <property name="site" value="site1" type="java.lang.String" description="Site name" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>mxdoc.page</id>
+            <description>MxDoc configuration</description>
+            <properties>
+                <property name="javaHome" value="/proj/oracle/jdk1.7.0._51" type="java.lang.String" description="Path to java directory" useWizardDefault="false"/>
+                <property name="host" value="HOSTNAME" type="java.lang.String" description="Fileserver host name" useWizardDefault="false"/>
+                <property name="port" value="10004" type="java.lang.Integer" description="Fileserver port number" useWizardDefault="false"/>
+            </properties>
+        </page>
+       <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="serverPageInfo">
+            <id>site.page</id>
+            <description>Xml server configuration</description>
+            <properties/>
+            <host>MUREXHOSTNAME</host>
+            <port>10001</port>
+        </page>
+        <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="serverPageInfo">
+            <id>hub.page</id>
+            <description>hub1 server configuration</description>
+            <properties/>
+            <host>MUREXHOSTNAME</host>
+            <port>10001</port>
+        </page>
+        <page>
+            <id>MarketRiskInstallation</id>
+            <description>Market Risk Module</description>
+            <properties>
+                <property name="marketRiskModuleInstall" value="false" type="java.lang.Boolean" description="Configure Market Risk module" useWizardDefault="false"/>
+            </properties>
+        </page>
+        <page>
+            <id>MarketRiskModulesSettings</id>
+            <description>Market Risk Module Settings</description>
+            <properties>
+                <property name="mraDirectory" value="tmp_mra" type="java.lang.String" description="Shared folder" useWizardDefault="false"/>
+                <property name="mraMlc" value="false" type="java.lang.Boolean" description="Activate link to MLC" useWizardDefault="false"/>
+                <property name="storageResultsDb" value="MX reporting database" type="murex.packaging.primary.MarketRiskRevaluationStorage" description="Database for results storage" useWizardDefault="false"/>
+                <property name="mxPortfolioTree" value="false" type="java.lang.Boolean" description="Activate Mx Portfolio tree" useWizardDefault="false"/>
+                <property name="storageScenariosDb" value="MX database" type="murex.packaging.primary.MarketRiskRevaluationStorage" description="Database for scenarios storage" useWizardDefault="false"/>
+            </properties>
+        </page>
+       <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="serverPageInfo">
+            <id>fs.page</id>
+            <description>File server configuration</description>
+            <properties/>
+            <host>MUREXHOSTNAME</host>
+            <port>10000</port>
+        </page>
+    </pages>
+</wizardConfig>

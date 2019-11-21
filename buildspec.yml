@@ -1,0 +1,46 @@
+# Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License"). You
+# may not use this file except in compliance with the License. A copy of
+# the License is located at
+#
+# http://aws.amazon.com/apache2.0/
+#
+# or in the "license" file accompanying this file. This file is
+# distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+#
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Setting Timezone to Sydney"
+      - ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime 
+      - echo "Installing Packer"
+      - curl -o packer.zip https://releases.hashicorp.com/packer/1.2.4/packer_1.2.4_linux_amd64.zip && unzip packer.zip
+      - echo "Validating Packer template"
+      - ./packer validate packer.json
+      - pip install --upgrade pip
+      - pip install pyopenssl ndg-httpsclient pyasn1
+      - pip install ansible
+  build:
+    commands:
+      - ls -l
+      - set | grep BUILD
+      - ./packer build -color=false -var source_artefact_bucket=${SOURCE_ARTEFACT_BUCKET} packer.json  | tee build.log
+  post_build:
+    commands:
+      - egrep "${AWS_REGION}\:\sami\-" build.log | cut -d' ' -f2 > ami_id.txt
+      # Packer doesn't return non-zero status; we must do that if Packer build failed
+      - test -s ami_id.txt || exit 1
+      - sed -i.bak "s/<<AMI-ID>>/$(cat ami_id.txt)/g" ami_builder_event.json
+      - aws events put-events --entries file://ami_builder_event.json
+      - echo "build completed on $(date)"
+artifacts:
+  files:
+    - ami_builder_event.json
+    - build.log
+  discard-paths: yes

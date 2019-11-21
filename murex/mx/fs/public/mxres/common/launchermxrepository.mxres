@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE Launcher>
+
+<Launcher>
+    <PlatformName>MX</PlatformName>
+    <InstallationCode>LAUNCHER_MXREPOSITORY</InstallationCode>
+    <AvailableServices>
+
+        <!-- STATICS REPOSITORY ENGINE -->
+        <AvailableService>
+            <Code>MXSTATICSREPOSITORY</Code>
+        </AvailableService>
+
+        <!-- TRADE REPOSITORY ENGINE -->
+        <AvailableService>
+            <Code>MXTRADEREPOSITORY</Code>
+            <Import>
+                <RefNickName>MXTRADEREPOSITORY.ENGINE</RefNickName>
+                <NickName>MXTRADEREPOSITORY.ENGINE</NickName>
+                <Customize>
+                    <LoadBalancingParameters OptimalNbOfProcess="1" OptimalNbOfSessionPerProcess="1"/>
+                    <DefaultCommands>
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#TRADE_REPO_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_LOG" MxAnchorType="Include" />
+                    </DefaultCommands>
+                </Customize>
+            </Import>
+        </AvailableService>
+
+        <AvailableService>
+            <Code>MXTRADEREPOSITORY</Code>
+            <Import>
+                <RefNickName>MXTRADEREPOSITORY.ENGINE</RefNickName>
+                <NickName>MXTRADEREPOSITORY.VIT</NickName>
+                <Customize>
+                    <LoadBalancingParameters OptimalNbOfProcess="1" OptimalNbOfSessionPerProcess="1"/>
+                    <DefaultCommands>
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#TRADE_REPO_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_LOG" MxAnchorType="Include" />
+                        <!-- DefaultCommand>/GETUNIQUEID_BY_CHUNK:10</DefaultCommand --> <!-- Contract Number may not be in sequence by time -->
+                    </DefaultCommands>
+                </Customize>
+            </Import>
+        </AvailableService>
+        <AvailableService>
+            <Code>MXTRADEREPOSITORY</Code>
+            <Import>
+                <RefNickName>MXTRADEREPOSITORY.ENGINE</RefNickName>
+                <NickName>MXTRADEREPOSITORY.CLS</NickName>
+                <Customize>
+                    <LoadBalancingParameters OptimalNbOfProcess="1" OptimalNbOfSessionPerProcess="1"/>
+                    <DefaultCommands>
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#TRADE_REPO_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_LOG" MxAnchorType="Include" />
+                        <DefaultCommand>/MXJ_PING_POP_GUI_DOCUMENT:1</DefaultCommand>
+                    </DefaultCommands>
+                </Customize>
+            </Import>
+        </AvailableService>
+
+        <AvailableService>
+            <Code>MXTRADEREPOSITORY</Code>
+            <Import>
+                <RefNickName>MXTRADEREPOSITORY.ENGINE</RefNickName>
+                <NickName>MXTRADEREPOSITORY.WF</NickName>
+                <Customize>
+                    <LoadBalancingParameters OptimalNbOfProcess="1" OptimalNbOfSessionPerProcess="1"/>
+                    <DefaultCommands>
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#TRADE_REPO_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_LOG" MxAnchorType="Include" />
+                    </DefaultCommands>
+                </Customize>
+            </Import>
+        </AvailableService>
+
+        <AvailableService>
+            <Code>MXTRADEREPOSITORY</Code>
+            <Import>
+                <RefNickName>MXTRADEREPOSITORY.ENGINE</RefNickName>
+                <NickName>MXTRADEREPOSITORY.ENGINE.PLC</NickName>
+                <Customize>
+                    <LoadBalancingParameters OptimalNbOfProcess="1" OptimalNbOfSessionPerProcess="1"/>
+                    <DefaultCommands>
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#TRADE_REPO_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_LOG" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.dbconfig.mxservercredential.mxres#CTLIBMOCredential" MxAnchorType="Include"/>
+                    </DefaultCommands>
+                </Customize>
+            </Import>
+        </AvailableService>		
+        <AvailableService>
+            <Code>MXTRADEREPOSITORY</Code>
+            <Import>
+                <RefNickName>MXTRADEREPOSITORY.ENGINE</RefNickName>
+                <NickName>MXTRADEREPOSITORY.LOGGING</NickName>
+                <Customize>
+                    <LoadBalancingParameters OptimalNbOfProcess="1" OptimalNbOfSessionPerProcess="1"/>
+                    <DefaultCommands>
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#TRADE_REPO_SETTINGS" MxAnchorType="Include" />
+                        <MxInclude MxAnchor="public.mxres.common.common_settings.mxres#COMMON_LOG" MxAnchorType="Include" />
+                        <DefaultCommand>/RDBMS_Statistics:traderep_db_:1</DefaultCommand>
+                        <DefaultCommand>/TIMER</DefaultCommand>
+                        <DefaultCommand>/FRMLOG:logs/traces/traderep_pretrade.log</DefaultCommand>
+                    </DefaultCommands>
+                </Customize>
+            </Import>
+        </AvailableService>
+
+    </AvailableServices>
+</Launcher>

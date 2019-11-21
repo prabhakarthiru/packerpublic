@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MxAnchors>
+  <!-- Define in this anchor your xmlflow data tables -->
+  <MxAnchor Code="XmlSpaces">
+  </MxAnchor>
+
+  <!-- Define in this anchor your fields values formulea -->
+  <MxAnchor Code="STPDOC_REF_TYPE.VALUES_FORMULA">
+  </MxAnchor>
+
+  <!-- Define in this anchor the repository cache maximum size -->
+  <MxAnchor Code="RepositoryCache">
+    <!--
+                <MaximumSize>500</MaximumSize>
+                -->
+  </MxAnchor>
+
+  <!-- Define in this anchor the data cache maximum size -->
+  <MxAnchor Code="XmlEntryCache_STPDOC_ENTRY_SPACE">
+    <!--
+                <MaximumSize>500</MaximumSize>
+                -->
+  </MxAnchor>
+
+  <MxAnchor Code="DIST_ENTRY_SPACE_Header_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="DIST_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPFC_ENTRY_SPACE_Header_Fields">
+    <DbKeyField>
+      <DbKeyFieldName>FOFOUREYE</DbKeyFieldName>
+      <DbKeyFieldDescription>FoFourEye</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>702</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>1</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>BOFOUREYE</DbKeyFieldName>
+      <DbKeyFieldDescription>BoFourEye</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>705</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>1</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>VAL_MODE</DbKeyFieldName>
+      <DbKeyFieldDescription>ValMode</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>709</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>TOTAL_TRIALS</DbKeyFieldName>
+      <DbKeyFieldDescription>TotalChasingTrials</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>722</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>2</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_TRIALS</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingTrials</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>712</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>2</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>LAST_CHASING_DATE</DbKeyFieldName>
+      <DbKeyFieldDescription>LastChasingDate</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>714</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>8</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>LAST_CHASING_PHASE</DbKeyFieldName>
+      <DbKeyFieldDescription>LastManualChasingPhase</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>720</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>20</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>NEXT_CHASING_DATE</DbKeyFieldName>
+      <DbKeyFieldDescription>NextChasingDate</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>716</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>8</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_INIT</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingInitiation</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>717</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_COM</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingCommunication</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>718</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>LAST_MANUAL_CHASING_TOOL</DbKeyFieldName>
+      <DbKeyFieldDescription>LastManualChasingTool</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>719</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>20</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_DETAILS</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingDetails</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>721</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>50</DbKeyFieldLength>
+    </DbKeyField>
+  </MxAnchor>
+
+  <MxAnchor Code="STPFC_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPSTL_ENTRY_SPACE_Header_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPSTL_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPDOC_ENTRY_SPACE_Header_Fields">
+    <DbKeyField>
+      <DbKeyFieldName>TOTAL_TRIALS</DbKeyFieldName>
+      <DbKeyFieldDescription>TotalChasingTrials</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>723</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>2</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_TRIALS</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingTrials</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>712</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>2</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>LAST_CHASING_DATE</DbKeyFieldName>
+      <DbKeyFieldDescription>LastChasingDate</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>714</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>8</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>LAST_CHASING_PHASE</DbKeyFieldName>
+      <DbKeyFieldDescription>LastManualChasingPhase</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>720</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>20</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>NEXT_CHASING_DATE</DbKeyFieldName>
+      <DbKeyFieldDescription>NextChasingDate</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>716</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>8</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_INIT</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingInitiation</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>717</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_COM</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingCommunication</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>718</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>LAST_MANUAL_CHASING_TOOL</DbKeyFieldName>
+      <DbKeyFieldDescription>LastManualChasingTool</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>719</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>20</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>CHASING_DETAILS</DbKeyFieldName>
+      <DbKeyFieldDescription>ChasingDetails</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>721</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>50</DbKeyFieldLength>
+    </DbKeyField>
+  </MxAnchor>
+
+  <MxAnchor Code="STPDOC_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPDOC_ENTRY_SPACE_Header_Indices">
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDOC_ENTRY_TABLE_FC_ID</DbKeyIndexName>
+      <DbKeyIndexFormula>(FC_ID)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDOC_ENTRY_TABLE_FC_CID</DbKeyIndexName>
+      <DbKeyIndexFormula>(FC_CID)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDOC_ENTRY_TABLE_DOC_ID</DbKeyIndexName>
+      <DbKeyIndexFormula>(DOC_ID)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDOC_ENTRY_TABLE_ND1</DbKeyIndexName>
+      <DbKeyIndexFormula>(FC_ORIGIN_ID, JOB_DESCRIPTION_LABEL, STP_STATUS1)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+	<DbKeyIndex>
+      <DbKeyIndexName>STPDOC_ENTRY_TABLE_STS_TIME_LNG</DbKeyIndexName>
+      <DbKeyIndexFormula>(STATUS_TIME_LONG)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+  </MxAnchor>
+ 
+  <MxAnchor Code="STPFC_ENTRY_SPACE_Header_Indices">
+    <DbKeyIndex>
+      <DbKeyIndexName>STPFC_ENTRY_TABLE_ND1</DbKeyIndexName>
+      <DbKeyIndexFormula>(STATUS_TIME_LONG)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+  </MxAnchor>
+
+  <MxAnchor Code="STPSTD_ENTRY_SPACE_Header_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPSTD_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPDLV_ENTRY_SPACE_Header_Fields">
+    <DbKeyField>
+      <DbKeyFieldName>VAL_MODE</DbKeyFieldName>
+      <DbKeyFieldDescription>ValMode</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>801</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+  </MxAnchor>
+
+  <MxAnchor Code="STPDLV_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPDLV_ENTRY_SPACE_Header_Indices">
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDLV_ENTRY_TABLE_ND1</DbKeyIndexName>
+      <DbKeyIndexFormula>(FC_ID)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDLV_ENTRY_TABLE_ND2</DbKeyIndexName>
+      <DbKeyIndexFormula>(FC_CID)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+    <DbKeyIndex>
+      <DbKeyIndexName>STPDLV_ENTRY_TABLE_ND3</DbKeyIndexName>
+      <DbKeyIndexFormula>(STP_STATUS_VALIDATION_LEVEL)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+  </MxAnchor>
+
+  <MxAnchor Code="STPEVT_ENTRY_SPACE_Header_Fields">
+    <DbKeyField>
+      <DbKeyFieldName>VAL_MODE</DbKeyFieldName>
+      <DbKeyFieldDescription>ValMode</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.standardworkflow</DbKeyFieldPath>
+      <DbKeyFieldID>901</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>EVENT_CLASS</DbKeyFieldName>
+      <DbKeyFieldDescription>EventClass</DbKeyFieldDescription>
+      <DbKeyFieldPath>mx.event</DbKeyFieldPath>
+      <DbKeyFieldID>904</DbKeyFieldID>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>50</DbKeyFieldLength>
+    </DbKeyField>
+  </MxAnchor>
+
+  <MxAnchor Code="STPEVT_ENTRY_SPACE_Body_Fields">
+  </MxAnchor>
+
+  <MxAnchor Code="STPEVT_ENTRY_SPACE_Header_Indices">
+    <DbKeyIndex>
+      <DbKeyIndexName>STPEVT_ENTRY_TABLE_ND1</DbKeyIndexName>
+      <DbKeyIndexFormula>(STATUS_TIME_LONG)</DbKeyIndexFormula>
+      <DbKeyIndexUnique>N</DbKeyIndexUnique>
+    </DbKeyIndex>
+  </MxAnchor>
+
+  <MxAnchor Code="STPFC_ENTRY_SPACE_Triggers">
+  </MxAnchor>
+
+</MxAnchors>

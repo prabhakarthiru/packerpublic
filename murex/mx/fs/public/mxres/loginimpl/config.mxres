@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE MxAnchors>
+
+<MxAnchors>
+    <MxAnchor Code="LOGINIMPL">
+        <DefaultCommand>/MXJ_HASHER_NAME:MX3-SHA256</DefaultCommand>
+    <!--         
+        <DefaultCommand>/MXJ_ADMIN_4EYES_ACTIVE:YES</DefaultCommand>
+        <DefaultCommand>/MXJ_BRANCHES_ACTIVE:YES</DefaultCommand>
+    -->
+    </MxAnchor>
+</MxAnchors>

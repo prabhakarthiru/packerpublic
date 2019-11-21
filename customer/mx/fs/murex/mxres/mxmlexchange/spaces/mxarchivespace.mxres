@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE XmlSpaces>
+<XmlSpaces>
+  <RmiRemoteObject>
+    <CreationName>XmlSpacesArchiver</CreationName>
+  </RmiRemoteObject>
+  <XmlSpacesCode>XmlSpacesArchiver</XmlSpacesCode>
+  <DbConfig>
+    <DbLogicalSource>MXDBSOURCE.MXMLEXCHANGE</DbLogicalSource>
+    <DbMapping>public.mxres.common.dbconfig.dbsourcemapping.mxres</DbMapping>
+    <DbTableReferenceID>CH_ARCHIVE_ID_SPACE</DbTableReferenceID>
+    <DbTableRepository>CH_ARCHIVE_REPOSITORY_SPACE</DbTableRepository>
+  </DbConfig>
+  <XmlSpace>
+    <NickName>CH_ARCHIVE_SPACE</NickName>
+    <DbTableName>CH_ARCHIVE_TABLE</DbTableName>
+    <DbTableNameBody>CH_ARCHIVE_TABLEBODY</DbTableNameBody>
+	<XMLInHeaderUsed>N</XMLInHeaderUsed>
+    <DbKeyFields>
+      <DbKeyField>
+        <DbKeyFieldName>STOP_STATUS</DbKeyFieldName>
+        <DbKeyFieldDescription>StopStatus</DbKeyFieldDescription>
+        <DbKeyFieldType>C</DbKeyFieldType>
+        <DbKeyFieldLength>10</DbKeyFieldLength>
+        <DbKeyFieldDataExtractionFormula/>
+      </DbKeyField>
+      <MxInclude MxAnchor="public.mxres.mxmlexchange.spaces.mxarchivespace.mxres#CH_ARCHIVE_SPACE_Header_Fields" MxAnchorType="Include"/>
+    </DbKeyFields>
+    <DbKeyFieldsBody>
+      <DbKeyField>
+        <DbKeyFieldName>STPDOC_DATE</DbKeyFieldName>
+        <DbKeyFieldDescription>Document Date</DbKeyFieldDescription>
+        <DbKeyFieldType>D</DbKeyFieldType>
+        <DbKeyFieldLength>8</DbKeyFieldLength>
+        <DbKeyFieldDataExtractionFormula/>
+      </DbKeyField>
+      <DbKeyField>
+        <DbKeyFieldName>STPDOC_TIME</DbKeyFieldName>
+        <DbKeyFieldDescription>Document Time</DbKeyFieldDescription>
+        <DbKeyFieldType>T</DbKeyFieldType>
+        <DbKeyFieldLength>8</DbKeyFieldLength>
+        <DbKeyFieldDataExtractionFormula/>
+      </DbKeyField>
+      <MxInclude MxAnchor="public.mxres.mxmlexchange.spaces.mxarchivespace.mxres#CH_ARCHIVE_SPACE_Body_Fields" MxAnchorType="Include"/>
+    </DbKeyFieldsBody>
+    <DbKeyIndices>
+      <MxInclude MxAnchor="public.mxres.mxmlexchange.spaces.mxarchivespace.mxres#CH_ARCHIVE_SPACE_Header_Indices" MxAnchorType="Include"/>
+    </DbKeyIndices>
+    <DbKeyIndicesBody>
+      <MxInclude MxAnchor="public.mxres.mxmlexchange.spaces.mxarchivespace.mxres#CH_ARCHIVE_SPACE_Body_Indices" MxAnchorType="Include"/>
+    </DbKeyIndicesBody>
+  </XmlSpace>
+</XmlSpaces>

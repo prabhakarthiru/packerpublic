@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE MxAnchors>
+<MxAnchors>
+
+  <!--
+  - flags used in ALL mx processes
+  -->
+  <MxAnchor Code="COMMON_SETTINGS">
+    <MxInclude MxAnchor="public.mxres.common.common_settings1.mxres#COMMON_SETTINGS1" MxAnchorType="Include" />
+    <MxInclude MxAnchor="public.mxres.common.common_settings2.mxres#COMMON_SETTINGS2" MxAnchorType="Include" />
+  </MxAnchor>
+  
+  <MxAnchor Code="COMMON_SETTINGS1">
+    <MxInclude MxAnchor="public.mxres.common.common_settings1.mxres#COMMON_SETTINGS1" MxAnchorType="Include" />
+  </MxAnchor>
+  
+  <MxAnchor Code="COMMON_SETTINGS2">
+    <MxInclude MxAnchor="public.mxres.common.common_settings2.mxres#COMMON_SETTINGS2" MxAnchorType="Include" />
+  </MxAnchor>
+  
+  <MxAnchor Code="COMMON_LOG">
+    <DefaultCommand>/CRV_NR_TIMER:ON</DefaultCommand>
+    <DefaultCommand>/FDI_TIMER:ON</DefaultCommand>
+    <DefaultCommand>/OSP_TIMER</DefaultCommand>
+    <DefaultCommand>/SI_TIMER</DefaultCommand>
+    <DefaultCommand>/TIMER</DefaultCommand>
+    <DefaultCommand>/WAREHOUSE_TIMER</DefaultCommand>
+    <DefaultCommand>/WAREHOUSE_TIMINGS:ON</DefaultCommand>
+    <DefaultCommand>/DEAL_EVALUATE_LOG:OFF</DefaultCommand>
+    <DefaultCommand>/EVS_TIMER</DefaultCommand>
+    <!-- <DefaultCommand>/FRMLOG:mx_msl.log</DefaultCommand> -->
+    <!-- <DefaultCommand>/RDBMS_STATISTICS:mx_session_:1</DefaultCommand> -->
+  </MxAnchor>
+
+  <!--
+  - Flags used only for end user sessions
+  -->
+  <MxAnchor Code="SESSION_SETTINGS">
+        <DefaultCommand>/QUERY_MAX_ITEMS_TO_LOAD_FOR_MjLsW70682:20000</DefaultCommand>
+        <DefaultCommand>/ADT_BROWSE_MAXIMUM_ITEM_LOAD:20000</DefaultCommand>
+  </MxAnchor>
+
+  <!--
+  - Flags used only for data publishers
+  -->
+  <MxAnchor Code="DAP_SETTINGS">
+<DefaultCommand>/DAP_TIMER_ON</DefaultCommand>
+  </MxAnchor>
+  
+  <!--
+  - Flags used only for tradeRepository
+  -->
+  <MxAnchor Code="TRADE_REPO_SETTINGS">
+<DefaultCommand>/DISABLE_ALTERNATE_ID_CACHE</DefaultCommand>
+  </MxAnchor>
+
+  <!--
+  - Flags used only for processing scripts
+  -->
+  <MxAnchor Code="PS_SETTINGS">
+  </MxAnchor>
+ 
+
+</MxAnchors>

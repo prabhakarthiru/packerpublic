@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE MxAnchors>
+<MxAnchors>
+  <MxAnchor Code="CH_ARCHIVE_SPACE_Header_Fields">
+    <DbKeyField>
+      <DbKeyFieldName>TARGET_ID</DbKeyFieldName>
+      <DbKeyFieldDescription>TargetId</DbKeyFieldDescription>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+      <DbKeyFieldDataExtractionFormula>public.postTrade.exchange.archiver.space.field.TargetID</DbKeyFieldDataExtractionFormula>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>FC_ID</DbKeyFieldName>
+      <DbKeyFieldDescription>ContractRef</DbKeyFieldDescription>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+      <DbKeyFieldDataExtractionFormula>public.postTrade.exchange.archiver.space.field.ContractID</DbKeyFieldDataExtractionFormula>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>DOC_PARENT_ID</DbKeyFieldName>
+      <DbKeyFieldDescription>DocParentId</DbKeyFieldDescription>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+      <DbKeyFieldDataExtractionFormula>public.postTrade.exchange.archiver.space.field.DocParentID</DbKeyFieldDataExtractionFormula>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>DOC_PARENT_CLASS_ID</DbKeyFieldName>
+      <DbKeyFieldDescription>DocParentClassId</DbKeyFieldDescription>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>10</DbKeyFieldLength>
+      <DbKeyFieldDataExtractionFormula>mx.postTrade.fields.document.DocParentClassID</DbKeyFieldDataExtractionFormula>
+    </DbKeyField>
+    <DbKeyField>
+      <DbKeyFieldName>STPDOC_TEMPLATE_NAME</DbKeyFieldName>
+      <DbKeyFieldDescription>TemplateName</DbKeyFieldDescription>
+      <DbKeyFieldType>C</DbKeyFieldType>
+      <DbKeyFieldLength>255</DbKeyFieldLength>
+      <DbKeyFieldDataExtractionFormula>mx.postTrade.fields.document.TemplateName</DbKeyFieldDataExtractionFormula>
+    </DbKeyField>
+  </MxAnchor>
+  <MxAnchor Code="CH_ARCHIVE_SPACE_Body_Fields">
+  </MxAnchor>
+  <MxAnchor Code="CH_ARCHIVE_SPACE_Header_Indices">
+    <DbKeyIndices>
+      <DbKeyIndex>
+        <DbKeyIndexName>CH_ARCHIVE_TABLE_NDX</DbKeyIndexName>
+        <DbKeyIndexFormula>(TARGET_ID, FC_ID, DOC_PARENT_ID)</DbKeyIndexFormula>
+        <DbKeyIndexUnique>N</DbKeyIndexUnique>
+      </DbKeyIndex>
+    </DbKeyIndices>
+  </MxAnchor>
+  <MxAnchor Code="CH_ARCHIVE_SPACE_Body_Indices">
+  </MxAnchor>
+</MxAnchors>
