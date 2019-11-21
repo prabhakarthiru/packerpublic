@@ -20,7 +20,7 @@ pipeline {
                    }
                    stage('PackerAMI'){
                                 steps {
-                                       echo ${cre}
+                                       sh 'test.sh'
                                 }
                    }
                    stage ('three') {
