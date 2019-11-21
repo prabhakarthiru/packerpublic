@@ -13,7 +13,7 @@ pipeline {
                                steps {
 
                                      echo "Validating Packer template"
-                                     /usr/local/packer/packer validate packer.json
+                                     sh '/usr/local/packer/packer validate packer.json'
                                       
                                }
                    }
