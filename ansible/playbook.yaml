@@ -25,14 +25,6 @@
       - 1.1.19
     # Password reuse limit task fails due to AttributionError in Ansible code; skipping
       - 5.3.3
-    service:
-    name: auditd
-    state: restarted
-  command: service auditd restart
-  args:
-    warn: no
-
-- name: restart chrony
     # Cloudwatch Logs Role configuration
     logs:
       - file: /var/log/messages
