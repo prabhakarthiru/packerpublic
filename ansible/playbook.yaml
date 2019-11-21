@@ -17,10 +17,22 @@
       - 4.2.1.4
       - 4.2.2.4
       - 4.2.2.5
+      - 4.1.2
+      - 4.1
+      - 4.1.3
+      - 4.1.n  
     # Autofs is no longer installed and we need to ignore it or else will fail
       - 1.1.19
     # Password reuse limit task fails due to AttributionError in Ansible code; skipping
       - 5.3.3
+    service:
+    name: auditd
+    state: restarted
+  command: service auditd restart
+  args:
+    warn: no
+
+- name: restart chrony
     # Cloudwatch Logs Role configuration
     logs:
       - file: /var/log/messages
