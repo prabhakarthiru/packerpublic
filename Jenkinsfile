@@ -9,7 +9,7 @@ pipeline {
                                steps {
 
                                       echo 'Hi, My first pipeline'
-                                      echo ${cre}
+                                      
                                }
                    }
 
