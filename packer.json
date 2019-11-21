@@ -33,9 +33,7 @@
     "run_volume_tags": {
       "Name": "{{user `ami_name`}}"
     },
-    "snapshot_tags": {
-      "Name": "{{user `ami_name`}}"
-    },
+
     "ami_description": "RHEL 74 GA with CIS benchmarkj and Murex",
     "associate_public_ip_address": "false",
     "encrypt_boot" : "true",
