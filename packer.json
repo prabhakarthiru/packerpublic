@@ -128,21 +128,6 @@
       "environment_vars": [
         "AWS_REGION={{user `aws_region`}}",
         "SOURCE_ARTEFACT_BUCKET={{user `source_artefact_bucket`}}"
-      ],
-      "inline": [
-        "set",
-        "sudo -E sh -ex /tmp/bash-scripts/disable_selinux.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/system_limits.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/user_limits.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/disk_layout.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/setup_rngd.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/install_dependencies.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/install_jdk.sh",
-        "sh -x  /etc/profile.d/java.sh",
-        "sudo -E sh -ex /tmp/bash-scripts/install_oracle_client.sh",
-        "sh -x /etc/profile.d/oracle_client.sh",
-        "ps aux",
-        "sudo -E sh -ex /tmp/bash-scripts/install_murex.sh"
       ]
     },
     {
