@@ -125,13 +125,6 @@
     }, 
     {
       "type": "shell",
-      "environment_vars": [
-        "AWS_REGION={{user `aws_region`}}",
-        "SOURCE_ARTEFACT_BUCKET={{user `source_artefact_bucket`}}"
-      ]
-    },
-    {
-      "type": "shell",
       "inline": [
         "sudo -E sed -i -e 's/^MACs/#MACS/g' /etc/ssh/sshd_config ",
         "rm .ssh/authorized_keys ; sudo rm /root/.ssh/authorized_keys; sudo rm -rf /tmp/*"
