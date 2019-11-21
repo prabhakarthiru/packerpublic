@@ -1,0 +1,158 @@
+{
+  "variables": {
+    "vpc": "{{env `BUILD_VPC_ID`}}",
+    "subnet": "{{env `BUILD_SUBNET_ID`}}",
+    "security_group": "{{env `BUILD_SG_ID`}}",
+    "instance_profile": "{{env `BUILD_PROFILE`}}",
+    "aws_region": "{{env `AWS_REGION`}}",
+    "ami_name": "RHEL74-CIS-Murex-{{isotime \"2006-01-02:_03_04_05 AEST\"}}"
+  },
+  "builders": [{
+    "name": "RHEL74+Murex",
+    "type": "amazon-ebs",
+    "region": "{{user `aws_region`}}",
+    "source_ami_filter": {
+        "filters": {
+            "virtualization-type": "hvm",
+            "name": "*RHEL-7.4_HVM_GA*",
+            "root-device-type": "ebs"
+        },
+        "owners": ["309956199498"],
+        "most_recent": true
+    },
+    "instance_type": "m4.large",
+    "ssh_username": "ec2-user",
+    "security_group_id": "{{user `security_group`}}",
+    "ami_name": "{{user `ami_name` | clean_ami_name}}",
+    "tags": {
+      "Name": "{{user `ami_name`}}"
+    },
+    "run_tags": { 
+      "Name": "{{user `ami_name`}}"
+    },
+    "run_volume_tags": {
+      "Name": "{{user `ami_name`}}"
+    },
+    "snapshot_tags": {
+      "Name": "{{user `ami_name`}}"
+    },
+    "ami_description": "RHEL 74 GA with CIS benchmarkj and Murex",
+    "associate_public_ip_address": "false",
+    "encrypt_boot" : "true",
+    "vpc_id": "{{user `vpc`}}",
+    "subnet_id": "{{user `subnet`}}",
+    "iam_instance_profile": "{{user `instance_profile`}}",
+
+    "launch_block_device_mappings": [ 
+      {
+        "device_name": "/dev/xvdg",
+        "volume_size": 20,
+        "delete_on_termination": "false",
+        "volume_type": "gp2",
+        "encrypted" : "true"
+      },
+      {
+        "device_name": "/dev/xvdh",
+        "volume_size": 20,
+        "delete_on_termination": "false",
+        "volume_type": "gp2",
+        "encrypted" : "true"
+      },
+      {
+        "device_name": "/dev/xvdi",
+        "volume_size": 50,
+        "delete_on_termination": "false",
+        "volume_type": "gp2",
+        "encrypted" : "true"
+      }
+    ]
+  }],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "murex",
+      "destination": "/tmp"
+    },
+    {
+      "type": "file",
+      "source": "aws",
+      "destination": "/tmp"
+    },    
+    {
+      "type": "file",
+      "source": "bash-scripts",
+      "destination": "/tmp"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo easy_install pip",
+        "sudo pip install --upgrade pip",
+        "sudo pip install pyopenssl ndg-httpsclient pyasn1",
+        "sudo pip install ansible"
+      ]
+    },
+    {
+      "type": "shell",
+      "environment_vars": [
+        "AWS_REGION={{user `aws_region`}}",
+        "SOURCE_ARTEFACT_BUCKET={{user `source_artefact_bucket`}}"
+      ],
+      "inline": [
+        "sudo -E mkdir -p -m 0777 /opt/aws/amazon-cloudwatch-agent/etc/",
+        "sudo -E cp /tmp/aws/amazon-cloudwatch-agent.json /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json",
+        "sudo -E yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm",
+        "sudo -E yum install -y wget unzip ",
+        "wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip",
+        "unzip AmazonCloudWatchAgent.zip -d /tmp",
+        "sudo -E yum install -y /tmp/amazon-cloudwatch-agent.rpm"
+      ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo -E yum install -y wget",
+        "sudo easy_install pip",
+        "sudo pip install --upgrade pip",
+        "sudo pip install pyopenssl ndg-httpsclient pyasn1",
+        "sudo pip install ansible"
+      ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "ansible/playbook.yaml",
+      "role_paths": [ "ansible/roles/common" ],
+      "playbook_dir": "ansible",
+      "galaxy_file": "ansible/requirements.yaml"
+    }, 
+    {
+      "type": "shell",
+      "environment_vars": [
+        "AWS_REGION={{user `aws_region`}}",
+        "SOURCE_ARTEFACT_BUCKET={{user `source_artefact_bucket`}}"
+      ],
+      "inline": [
+        "set",
+        "sudo -E sh -ex /tmp/bash-scripts/disable_selinux.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/system_limits.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/user_limits.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/disk_layout.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/setup_rngd.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/install_dependencies.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/install_jdk.sh",
+        "sh -x  /etc/profile.d/java.sh",
+        "sudo -E sh -ex /tmp/bash-scripts/install_oracle_client.sh",
+        "sh -x /etc/profile.d/oracle_client.sh",
+        "ps aux",
+        "sudo -E sh -ex /tmp/bash-scripts/install_murex.sh"
+      ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo -E sed -i -e 's/^MACs/#MACS/g' /etc/ssh/sshd_config ",
+        "rm .ssh/authorized_keys ; sudo rm /root/.ssh/authorized_keys; sudo rm -rf /tmp/*"
+      ]
+    }
+  ]
+}
