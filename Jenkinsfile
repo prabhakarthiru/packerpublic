@@ -1,12 +1,11 @@
 pipeline {
 	agent any
 
-options {
-    ansiColor('xterm')
-    timestamps()
-    timeout(time: 1, unit: 'HOURS'
-    disableConcurrentBuilds()
-  }
+      options {
+       timestamps()
+       timeout(time: 1, unit: 'HOURS'
+       disableConcurrentBuilds()
+       }
 
   environment {
     BUILD_VPC_ID = 'vpc-9c99a2f9'
