@@ -27,4 +27,4 @@
         group_name: "system_logs"
   roles:
     - common
-    - RHEL7-CIS
+    - HarryHarcourt.Ansible-RHEL7-CIS-Benchmarks
