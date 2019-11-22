@@ -1,2 +1,2 @@
 ---
-- src: HarryHarcourt.Ansible-RHEL7-CIS-Benchmarks
+- src: https://github.com/MindPointGroup/RHEL7-CIS
