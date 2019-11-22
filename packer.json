@@ -5,7 +5,7 @@
     "security_group": "{{env `BUILD_SG_ID`}}",
     "instance_profile": "{{env `BUILD_PROFILE`}}",
     "aws_region": "{{env `AWS_REGION`}}",
-    "ami_name": "RHEL74-CIS-Murex-{{isotime \"2006-01-02:_03_04_05 AEST\"}}"
+    "ami_name": "RHEL76-CIS-Murex-{{isotime \"2006-01-02:_03_04_05 AEST\"}}"
   },
   "builders": [{
     "name": "RHEL74+Murex",
