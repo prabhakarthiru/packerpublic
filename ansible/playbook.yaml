@@ -3,8 +3,6 @@
   connection: local
   gather_facts: true    # gather OS info that is made available for tasks/roles
   become: yes           # majority of CIS tasks require root
-  ignore_errors: yes
-
   vars:
     # CIS Controls whitepaper:  http://bit.ly/2mGAmUc
     # AWS CIS Whitepaper:       http://bit.ly/2m2Ovrh
@@ -30,4 +28,4 @@
         group_name: "system_logs"
   roles:
     - common
-    - HarryHarcourt.Ansible-RHEL7-CIS-Benchmark
+    - HarryHarcourt.Ansible-RHEL7-CIS-Benchmarks
