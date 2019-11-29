@@ -1,8 +1,5 @@
 # packer script
 
-source cicd/params.env
-source cicd/assumerole.env
-
 
 TASK=$1
 
