@@ -3,7 +3,7 @@
   connection: local
   gather_facts: true    # gather OS info that is made available for tasks/roles
   become: yes           # majority of CIS tasks require root
-  
+  ignore_errors: yes
   roles:
     - common
     - RHEL7-CIS
