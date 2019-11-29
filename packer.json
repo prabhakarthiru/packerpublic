@@ -8,16 +8,16 @@
     "ami_name": "RHEL76-CIS-Murex-{{isotime \"2006-01-02:_03_04_05 AEST\"}}"
   },
   "builders": [{
-    "name": "RHEL74+Murex",
+    "name": "RHEL76+Murex",
     "type": "amazon-ebs",
     "region": "{{user `aws_region`}}",
     "source_ami_filter": {
         "filters": {
             "virtualization-type": "hvm",
-            "name": "*RHEL-7.4_HVM_GA*",
+            "name": "*RHEL-7.6_HVM_GA*",
             "root-device-type": "ebs"
         },
-        "owners": ["309956199498"],
+        
         "most_recent": true
     },
     "instance_type": "m4.large",
@@ -34,7 +34,7 @@
       "Name": "{{user `ami_name`}}"
     },
 
-    "ami_description": "RHEL 74 GA with CIS benchmarkj and Murex",
+    "ami_description": "RHEL 76 GA with CIS benchmarkj and Murex",
     "associate_public_ip_address": "false",
     "encrypt_boot" : "true",
     "vpc_id": "{{user `vpc`}}",
