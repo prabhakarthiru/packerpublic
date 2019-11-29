@@ -14,7 +14,7 @@
     "source_ami_filter": {
         "filters": {
             "virtualization-type": "hvm",
-            "name": "*RHEL-7.6_HVM_GA*",
+            "name": "*RHEL-7.6_HVM_GA-2019*",
             "root-device-type": "ebs"
         },
          "owners":["775817220478"],
