@@ -14,7 +14,7 @@
       - 3.6.2
     # Cloudwatch Logs will be used instead of Rsyslog/Syslog-ng
     ## Same would be true if any other software that doesn't support Rsyslog/Syslog-ng mechanisms
-      - 4.1.2
+      - 4.1
       - 4.2.1.4
       - 4.2.2.4
       - 4.2.2.5
@@ -22,6 +22,7 @@
       - 1.1.19
     # Password reuse limit task fails due to AttributionError in Ansible code; skipping
       - 5.3.3
+      - 6.1.1
     # Cloudwatch Logs Role configuration
     logs:
       - file: /var/log/messages
