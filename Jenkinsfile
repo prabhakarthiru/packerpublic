@@ -21,7 +21,7 @@ pipeline {
                                steps {
 
                                      echo "Validating Packer template"
-                                     sh 'sh packer.sh validate'
+                                     sh '/usr/local/packer/packer validate'
                                       
                                }
                    }
@@ -29,7 +29,7 @@ pipeline {
                    stage('PackerAMI') {
                                 steps {
                                     echo "Baking AMI in-Progress"
-                                     sh 'sh packer.sh build'
+                                     sh '/usr/local/packer/packer build'
                                      echo "Baking AMI Success"
                                 }
                    }
