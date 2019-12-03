@@ -6,11 +6,11 @@ TASK=$1
   case $TASK in
 	validate)
 		echo "Starting Packer validate"
-        packer validate packer.json
+        /usr/local/packer/packer validate packer.json
 		;;
 	build)
 		echo "starting packer build"
-        packer build packer.json
+        /usr/local/packer/packer build packer.json
 		break
 		;;
 	*)
