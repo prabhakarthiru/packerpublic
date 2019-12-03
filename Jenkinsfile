@@ -14,6 +14,7 @@ pipeline {
     BUILD_PROFILE = 'ec2switchrole'
     AWS_REGION = 'ap-southeast-2'
     source_artefact_bucket= 'cicdbucket-thirup'
+    PACKER_INPUT_JSON = 'cicd/packer.json'
 
   }
 	       stages {
@@ -21,7 +22,7 @@ pipeline {
                                steps {
 
                                      echo "Validating Packer template"
-                                     sh '/usr/local/packer/packer validate packer.json'
+                                     sh 'sh packer.sh validate'
                                       
                                }
                    }
@@ -29,7 +30,7 @@ pipeline {
                    stage('PackerAMI') {
                                 steps {
                                     echo "Baking AMI in-Progress"
-                                     sh '/usr/local/packer/packer build packer.json'
+                                     sh 'sh cicd/packer.sh build'
                                      echo "Baking AMI Success"
                                 }
                    }

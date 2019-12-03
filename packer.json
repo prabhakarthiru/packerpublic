@@ -117,13 +117,6 @@
       ]
     },
     {
-      "type": "ansible-local",
-      "playbook_file": "ansible/playbook.yaml",
-      "role_paths": [ "ansible/roles/common" ],
-      "playbook_dir": "ansible",
-      "galaxy_file": "ansible/requirements.yaml"
-    }, 
-    {
       "type": "shell",
       "inline": [
         "sudo -E sed -i -e 's/^MACs/#MACS/g' /etc/ssh/sshd_config ",
