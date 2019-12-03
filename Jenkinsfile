@@ -14,7 +14,7 @@ pipeline {
     BUILD_PROFILE = 'ec2switchrole'
     AWS_REGION = 'ap-southeast-2'
     source_artefact_bucket= 'cicdbucket-thirup'
-    PACKER_INPUT_JSON = 'cicd/packer.json'
+    PACKER_INPUT_JSON = 'packer.json'
 
   }
 	       stages {
