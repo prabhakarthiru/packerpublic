@@ -29,7 +29,7 @@ pipeline {
                    stage('PackerAMI') {
                                 steps {
                                     echo "Baking AMI in-Progress"
-                                     sh 'sh cicd/packer.sh build'
+                                     sh 'sh packer.sh build'
                                      echo "Baking AMI Success"
                                 }
                    }
