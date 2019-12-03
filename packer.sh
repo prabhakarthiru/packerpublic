@@ -6,11 +6,11 @@ TASK=$1
   case $TASK in
 	validate)
 		echo "Starting Packer validate"
-        packer validate $PACKER_INPUT_JSON
+        packer validate packer.json
 		;;
 	build)
 		echo "starting packer build"
-        packer build $PACKER_INPUT_JSON
+        packer build packer.json
 		break
 		;;
 	*)
